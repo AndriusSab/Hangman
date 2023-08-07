@@ -93,6 +93,14 @@ class HangmanGame:
             print("Congratulations! You've guessed the word:", self.secret_word)
         else:
             print("Sorry, you're out of attempts. The word was:", self.secret_word)
+            
+        play_again = input("Do you want to play again? (Y/N): ")
+        
+        if play_again.upper() == "Y":
+            self.__init__()  
+            self.play()
+        else:
+            print("Thanks for playing!")
 
 if __name__ == "__main__":
     game = HangmanGame()
