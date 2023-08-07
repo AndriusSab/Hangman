@@ -75,6 +75,10 @@ class HangmanGame:
             if guess in self.guesses:
                 print("You've already guessed that letter.")
                 continue
+            
+            if guess in self.secret_word:
+                self.make_guess(guess)
+                print("\n Correct guess! Keep it up!")
 
 
             if guess not in self.secret_word:
